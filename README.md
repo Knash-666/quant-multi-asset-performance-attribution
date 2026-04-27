@@ -8,6 +8,7 @@ Processed dataset available in `data/processed/cleaned_data.rds`.
 
 ## Key Results
 - Net Alpha: **8.13% (p = 0.040)**
+- Alpha remains positive across rolling windows → not driven by isolated periods
 - Rolling Alpha: **78.9% positive periods → persistence**
 - Sharpe Ratio: **0.93 vs 0.27 (Nifty benchmark)**
 - GARCH Persistence: **0.935 → long volatility memory**
@@ -24,7 +25,7 @@ Processed dataset available in `data/processed/cleaned_data.rds`.
 - Structural Inference: Reverse-engineered allocation logic (volatility-driven equity, tail-risk hedging via gold)
 
 ## Key Insight
-Alpha is driven by dynamic regime-based asset allocation rather than stock selection. The fund adjusts equity exposure in response to volatility and uses gold as a defensive hedge, effectively trading covariance structures.
+The fund’s alpha is statistically significant (p = 0.040) and primarily driven by dynamic regime-based asset allocation rather than security selection — indicating systematic exposure timing rather than idiosyncratic alpha generation.
 
 ## Repository Structure
 - `data/` → raw and processed datasets  
@@ -48,9 +49,10 @@ Alpha is driven by dynamic regime-based asset allocation rather than stock selec
 ![Tail Risk](outputs/plots/tail_risk.png)
 
 ## Limitations
-- Gaussian assumption in Monte Carlo  
-- Single-fund analysis (no cross-sectional validation)  
-- In-sample evaluation  
+- Results are based on in-sample analysis; no out-of-sample validation performed  
+- Monte Carlo simulation assumes conditional normality (may underestimate extreme tail risk)  
+- Single-fund analysis limits generalizability  
+- Factor model may omit latent risk drivers (e.g., macro regime shifts)
 
 ## How to Run
 ```bash
