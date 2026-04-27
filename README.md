@@ -14,12 +14,15 @@ The analysis integrates **factor modeling, time-series econometrics, and simulat
 
 ## Core Claim
 
-The fund’s statistically significant alpha (**8.13%, p = 0.040**) is **not driven by security selection**, but by **dynamic, regime-sensitive asset allocation**.
+The fund’s statistically significant alpha (8.13%, p = 0.040) is not driven by security selection, but by dynamic, regime-sensitive asset allocation.
 
-Specifically, the manager appears to exploit **time-varying covariance structures across asset classes**, adjusting exposures in response to volatility regimes.  
+Specifically, the manager appears to exploit time-varying covariance structures across asset classes, adjusting exposures in response to volatility regimes.  
 This suggests that performance is likely driven by systematic exposure timing rather than idiosyncratic alpha generation.
 
 This interpretation is supported by persistent rolling alpha, volatility clustering (GARCH), and cross-asset diversification patterns observed in the data.
+
+*These conclusions should be interpreted with caution due to model assumptions and limited sample size.*
+
 ---
 
 ## Key Results
