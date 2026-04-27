@@ -33,6 +33,20 @@ Alpha is driven by dynamic regime-based asset allocation rather than stock selec
 - `outputs/` → plots and tables  
 - `report/` → final PDF  
 
+## Sample Outputs
+
+### Performance vs Benchmark
+![Cumulative Growth](outputs/plots/cumulative_growth.png)
+
+### Rolling Alpha (Consistency of Skill)
+![Rolling Alpha](outputs/plots/rolling_alpha.png)
+
+### Drawdown Profile
+![Drawdown](outputs/plots/drawdown.png)
+
+### Tail Risk (Monte Carlo)
+![Tail Risk](outputs/plots/tail_risk.png)
+
 ## Limitations
 - Gaussian assumption in Monte Carlo  
 - Single-fund analysis (no cross-sectional validation)  
