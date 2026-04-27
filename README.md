@@ -15,6 +15,7 @@ Processed dataset available in `data/processed/cleaned_data.rds`.
 - PCA: **55% variance explained → meaningful diversification**
 
 ## Methodology
+- Data Preparation: Raw financial data processed using scripts in `src/data_prep.R`
 - Data Processing: NAV → log returns, TER-adjusted daily  
 - Factor Modeling: CAPM + multivariate regression (Equity, Gold, Debt)  
 - Time Series: ADF (stationarity), ARIMA (mean), GARCH (volatility)  
