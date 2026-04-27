@@ -113,6 +113,18 @@ This suggests:
 
 ---
 
+## Practical Implication
+
+Based on the analysis, the fund demonstrates:
+
+- persistent alpha after fees  
+- controlled drawdowns  
+- improved tail-risk behavior  
+
+This suggests the fund is suitable for:
+- risk-adjusted allocation in diversified portfolios  
+- investors seeking downside protection with moderate return trade-off  
+
 ## How to Run
 
 ```r
