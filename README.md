@@ -1,86 +1,43 @@
 # Dynamic Multi-Asset Portfolio Analysis & Performance Attribution
 
 ## Overview
-This project performs a full quantitative performance attribution of a multi-asset mutual fund. It evaluates whether observed alpha is statistically significant, structurally consistent, and achieved without hidden tail risk.
-
----
+Quantitative performance attribution of a multi-asset mutual fund to assess whether observed alpha is statistically significant, persistent across time, and achieved without hidden tail risk.
 
 ## Key Results
-
-- Net Alpha: **8.13% (p = 0.040)**  
-- Rolling Alpha: **78.9% positive periods → persistent performance**  
-- Sharpe Ratio: **0.93 vs 0.27 (Nifty benchmark)**  
-- GARCH Persistence: **0.935 → long volatility memory**  
-- Tail Risk Reduction: **~0.72% improvement (Monte Carlo)**  
-- PCA: **55% variance → genuine diversification**
-
----
+- Net Alpha: **8.13% (p = 0.040)**
+- Rolling Alpha: **78.9% positive periods → persistence**
+- Sharpe Ratio: **0.93 vs 0.27 (Nifty benchmark)**
+- GARCH Persistence: **0.935 → long volatility memory**
+- Tail Risk Reduction: **~0.72% (Monte Carlo)**
+- PCA: **55% variance explained → meaningful diversification**
 
 ## Methodology
-
-### Data Processing
-- NAV → log returns  
-- Expense Ratio (TER) adjusted at daily level  
-
-### Factor Modeling
-- CAPM (Alpha, Beta estimation)  
-- Multivariate regression (Equity, Gold, Debt)
-
-### Time Series Modeling
-- ADF test → stationarity  
-- ARIMA → mean process  
-- GARCH → volatility clustering  
-
-### Model Refinement
-- Ljung-Box test → detected residual autocorrelation  
-- Upgraded to ARMA-GARCH  
-
-### Risk Analysis
-- Drawdown, Calmar Ratio  
-- Conditional Value-at-Risk (CVaR)  
-- Monte Carlo simulation (10,000 paths)
-
-### Structural Inference
-- Reverse-engineered fund allocation logic  
-- Volatility-driven equity exposure  
-- Tail-risk driven gold allocation  
-
----
+- Data Processing: NAV → log returns, TER-adjusted daily  
+- Factor Modeling: CAPM + multivariate regression (Equity, Gold, Debt)  
+- Time Series: ADF (stationarity), ARIMA (mean), GARCH (volatility)  
+- Model Refinement: Ljung-Box → ARMA-GARCH upgrade  
+- Risk Analysis: Drawdown, Calmar, CVaR, Monte Carlo (10,000 simulations)  
+- Structural Inference: Reverse-engineered allocation logic (volatility-driven equity, tail-risk hedging via gold)
 
 ## Key Insight
-
-The fund’s alpha is not driven by stock selection, but by dynamic regime-based asset allocation. The manager effectively trades covariance structures, reducing equity exposure during high-volatility regimes and reallocating to defensive assets.
-
----
+Alpha is driven by dynamic regime-based asset allocation rather than stock selection. The fund adjusts equity exposure in response to volatility and uses gold as a defensive hedge, effectively trading covariance structures.
 
 ## Repository Structure
-
-- data/ → raw and processed datasets
-- notebooks/ → step-by-step analysis
-- src/ → reusable modeling functions
-- outputs/ → plots and tables
-- report/ → final PDF report
-
-
----
+- `data/` → raw and processed datasets  
+- `notebooks/` → analysis workflow  
+- `src/` → reusable modeling functions  
+- `outputs/` → plots and tables  
+- `report/` → final PDF  
 
 ## Limitations
-
 - Gaussian assumption in Monte Carlo  
-- Single fund (no cross-sectional validation)  
-- In-sample analysis  
-
----
+- Single-fund analysis (no cross-sectional validation)  
+- In-sample evaluation  
 
 ## How to Run
-
 ```bash
-# Install dependencies
 install.packages(c("quantmod", "rugarch", "tseries", "PerformanceAnalytics"))
-
-# Run analysis scripts / notebooks
 ```
 
-# Author
-
-## Bedangshu Majumder
+# Author 
+Bedangshu Majumder
