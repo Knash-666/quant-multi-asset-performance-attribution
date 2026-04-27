@@ -3,6 +3,9 @@
 ## Overview
 Quantitative performance attribution of a multi-asset mutual fund to assess whether observed alpha is statistically significant, persistent across time, and achieved without hidden tail risk.
 
+## Data
+Processed dataset included in `data/processed/` (RDS format).
+
 ## Key Results
 - Net Alpha: **8.13% (p = 0.040)**
 - Rolling Alpha: **78.9% positive periods → persistence**
